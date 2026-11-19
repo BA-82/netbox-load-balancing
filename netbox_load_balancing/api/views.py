@@ -113,7 +113,7 @@ class MemberViewSet(NetBoxModelViewSet):
 
 
 class MemberAssignmentViewSet(NetBoxModelViewSet):
-    queryset = MemberAssignment.objects.all()
+    queryset = MemberAssignment.objects.all().order_by("id")
     serializer_class = MemberAssignmentSerializer
     filterset_class = MemberAssignmentFilterSet
 
