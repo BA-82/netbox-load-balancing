@@ -59,7 +59,7 @@ class LBServiceViewSet(NetBoxModelViewSet):
 
 
 class LBServiceAssignmentViewSet(NetBoxModelViewSet):
-    queryset = LBServiceAssignment.objects.all()
+    queryset = LBServiceAssignment.objects.all().order_by("id")
     serializer_class = LBServiceAssignmentSerializer
     filterset_class = LBServiceAssignmentFilterSet
 
@@ -71,7 +71,7 @@ class VirtualIPPoolViewSet(NetBoxModelViewSet):
 
 
 class VirtualIPPoolAssignmentViewSet(NetBoxModelViewSet):
-    queryset = VirtualIPPoolAssignment.objects.all()
+    queryset = VirtualIPPoolAssignment.objects.all().order_by("id")
     serializer_class = VirtualIPPoolAssignmentSerializer
     filterset_class = VirtualIPPoolAssignmentFilterSet
 
@@ -89,7 +89,7 @@ class HealthMonitorViewSet(NetBoxModelViewSet):
 
 
 class HealthMonitorAssignmentViewSet(NetBoxModelViewSet):
-    queryset = HealthMonitorAssignment.objects.all()
+    queryset = HealthMonitorAssignment.objects.all().order_by("id")
     serializer_class = HealthMonitorAssignmentSerializer
     filterset_class = HealthMonitorAssignmentFilterSet
 
@@ -101,7 +101,7 @@ class PoolViewSet(NetBoxModelViewSet):
 
 
 class PoolAssignmentViewSet(NetBoxModelViewSet):
-    queryset = PoolAssignment.objects.all()
+    queryset = PoolAssignment.objects.all().order_by("id")
     serializer_class = PoolAssignmentSerializer
     filterset_class = PoolAssignmentFilterSet
 
